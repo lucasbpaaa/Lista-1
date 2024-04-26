@@ -1,0 +1,35 @@
+#Question 1:
+#a)
+x = 1
+myList = [10, 11, x, 13, "Ola", "casa", "carro", "pé"]
+for z in myList:
+ print(z)
+print()
+#b)
+x = 2
+myList = [10, 11, x, 13, "Ola", "casa", "carro", "pé"]
+for i in range(len(myList)):
+ print(i)
+print()
+#c)
+x = 'OLA'
+myList = [10, 11, x, 13, "Ola", "casa", "carro", "p ́e"]
+i = 1
+while myList[i] != "carro":
+ print(myList[i])
+ i+=1
+print()
+
+#Question 2:
+x = [1, 2, 3, 4, 5]
+def sum_cumulative(x):
+    start = 0
+    cumulative_list = []
+    for number in x:
+        start += number
+        cumulative_list.append(start)
+    print(cumulative_list)  
+    return cumulative_list
+result = sum_cumulative(x)
+
+#Question 3:
