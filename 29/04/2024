@@ -32,4 +32,49 @@ def sum_cumulative(x):
     return cumulative_list
 result = sum_cumulative(x)
 
-#Question 3:
+#Question 3: 
+def nested_sum(lista):
+    soma = 0
+    for numero in lista:
+        for num in numero:
+            soma += num
+
+    print(soma)
+
+nested_sum([[1,2], [3], [4,5,6],[7]])
+
+#Questão 4:
+ def relative_prime(pri_num, seg_num):
+    qnt_divi = 0
+    if pri_num >= seg_num:
+        for numero in range(1, seg_num + 1):
+            if pri_num % numero == 0 and seg_num % numero == 0:
+                qnt_divi += 1
+        if qnt_divi > 1:
+            print(f'não são primos: {False}')
+        else:
+            print(f'são primos: {True}')            
+    else:
+        for numero in range(1, pri_num + 1):
+            if pri_num % numero == 0 and seg_num % numero == 0:
+                qnt_divi += 1
+        if qnt_divi > 1:
+            print(f'não são primos: {False}')
+        else:
+            print(f'são primos: {True}')
+
+relative_prime(8,20)   
+
+#Questão 5
+ def before_half(numero):
+    
+    if numero >= 0:
+
+        for num in range(numero, (numero // 2),-1):
+            print(num)
+    
+    else:
+        for num in range(numero, (numero // 2)):
+            print(num)
+before_half(-10)    
+
