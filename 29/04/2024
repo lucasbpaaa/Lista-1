@@ -46,24 +46,28 @@ nested_sum([[1,2], [3], [4,5,6],[7]])
 #Questão 4:
  def relative_prime(pri_num, seg_num):
     qnt_divi = 0
+    if pri_num <0 :
+        pri_num = (-1)*pri_num 
+    if seg_num <0 :
+        seg_num = (-1)*seg_num 
     if pri_num >= seg_num:
         for numero in range(1, seg_num + 1):
             if pri_num % numero == 0 and seg_num % numero == 0:
                 qnt_divi += 1
         if qnt_divi > 1:
-            print(f'não são primos: {False}')
+            return False
         else:
-            print(f'são primos: {True}')            
+            return True            
     else:
         for numero in range(1, pri_num + 1):
             if pri_num % numero == 0 and seg_num % numero == 0:
                 qnt_divi += 1
         if qnt_divi > 1:
-            print(f'não são primos: {False}')
+            return False
         else:
-            print(f'são primos: {True}')
+            return True  
 
-relative_prime(8,20)   
+relative_prime(-8,-3)   
 
 #Questão 5
  def before_half(numero):
